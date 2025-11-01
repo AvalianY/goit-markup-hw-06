@@ -9,6 +9,10 @@
     display: none;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 /*---------------------header-----------------------*/
 .mobile-menu-button {
     display: none;
@@ -61,15 +65,15 @@
 .ul-address {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 .address-ref {
     font-style: normal;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.5;
     color: var(--slate);
     letter-spacing: 0.02em;
-    padding: 12px 0;
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -81,18 +85,30 @@
 /*---------------------main general----------------*/
 .main-first-secion {
     max-width: 768px;
+    padding-bottom: 112px;
+    padding-top: 112px;
+}
+
+.main-first-secion .container {
+    
 }
 
 .main-title {
-    max-width: 496px;
+    width: 496px;
     font-size: 56px;
+}
+
+.main-order-button {
+    margin-top: 36px;
 }
 
 /*---------------------main advantage----------------*/
 .ul-advantage-section {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 24px;
+    row-gap: 72px;
 }
 
 .li-advantage-section {
@@ -107,9 +123,8 @@
 
 /*---------------------footer------------------------*/
 .footer {
-    max-width: 768px;
+    padding: 96px 108px;
 }
-
 .footer .container {
     display: flex;
     flex-direction: row;
@@ -121,17 +136,14 @@
     display: flex;
     align-items: baseline;
     flex-direction: column;
-    padding-left: 120px;
 }
 
 .footer-box-media {
     align-items: baseline;
-    padding-top: 96px;
 }
 
 .footer-form-container {
     align-items: baseline;
-    padding-left: 120px;
 }
 
 .footer-form {
@@ -151,22 +163,22 @@
 }
 }
 
-@media (min-width: 768px) and (max-width: 1157px) {
-/*---------------------global-----------------------*/
-/*---------------------header-----------------------*/
-/*---------------------main general----------------*/
-}
+
+
+/*---------------------------------------------------------*/
+
+
+
 
 @media (min-width: 1158px) {
 /*---------------------global-----------------------*/ 
 .container {
-        max-width: 1440px;
+    max-width: 1158px;
+    padding: 0 15px;    
 }
 /*---------------------header-----------------------*/
 header .container {
     justify-content: space-between;
-    padding-left: 156px;
-    padding-right: 156px;
 }
 
 .header-logo-a {
@@ -196,13 +208,7 @@ header .container {
 }
 
 .address-ref {
-    font-style: normal;
     font-size: 16px;
-    line-height: 1.5;
-    color: var(--slate);
-    letter-spacing: 0.02em;
-    padding: 24px 0;
-    display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*---------------------main general----------------*/
@@ -229,11 +235,6 @@ header .container {
 /*---------------------main advantage----------------*/
 .main-advantage-section {
     padding: 120px 0px;
-}
-
-.main-advantage-section .container{
-    padding-left: 156px;
-    padding-right: 156px;
 }
 
 .li-advantage-section {
@@ -265,11 +266,6 @@ header .container {
     padding: 120px 0;
 }
 
-.main-team-section .container {
-    padding-left: 156px;
-    padding-right: 156px;
-}
-
 .team-card {
     width: calc((100% - 72px) / 4);
 }
@@ -292,13 +288,13 @@ header .container {
     padding: 120px 0;
 }
 
-.main-portfolio-section .container {
-    padding-left: 156px;
-    padding-right: 156px;
-}
-
 .portfolio-card {
     flex: 1 1 calc((100% - 72px) / 3);
+   
+}
+
+.portfolio-card img {
+    width: 100%;
 }
 
 .portfolio-overlay-text {
@@ -351,18 +347,20 @@ header .container {
 
 /*---------------------footer------------------------*/
 .footer {
-    max-width: 1440px;
     padding: 100px 0;
 }
 
 .footer .container {
-    display: flex;
-    align-items: baseline;
     flex-direction: row;
+    gap: 0;
 }
 
 .footer-box-logo {
     margin-right: 120px;
+}
+
+.footer-box-media {
+    margin-right: 80px;
 }
 
 .footer-media-link {
@@ -372,11 +370,6 @@ header .container {
 .footer-media-link:hover,
 .footer-media-link:focus {
     background-color: var(--green)
-}
-
-.footer-form-container {
-    margin-left: 80px;
-    padding-left: 0px;
 }
 
 .footer-subscribe-button {
@@ -457,7 +450,7 @@ header .container {
 }
 
 @media  (min-resolution: 192dpi) {
-    .main-first-secio{
+    .main-first-secion{
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),

@@ -46,10 +46,8 @@ img {
 
 .container {
     max-width: 320px;
-    padding: 16px;
+    padding: 0 16px;
     margin: 0 auto;
-    outline: 2px solid red;
-    outline-offset: -2px;
 }
 
 /*---------------------header-----------------------*/
@@ -81,6 +79,7 @@ header .container {
     line-height: 1.17;
     letter-spacing: 0.03em;
     background-color: var(--white);
+    padding: 16px 0;
 }
 
 .header-logo-word {
@@ -88,9 +87,7 @@ header .container {
 }
 
 .mobile-menu-button {
-    position: relative;
-    top: 16x;
-    right: 16px;
+
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -119,7 +116,7 @@ main .container {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/people-office.jpg);
-    padding: 72px 52px;
+    padding: 72px 0;
     background-size: cover;
     max-width: 320px;
     margin: 0 auto;
@@ -132,7 +129,7 @@ main .container {
     line-height: 1.1;
     text-align: center;
     letter-spacing: 0.02em;
-    max-width: 320px;
+    width: 216px;
     margin: 0 auto;
     font-size: 36px;
 
@@ -174,13 +171,15 @@ main .container {
 
 }
 
-.main-advantage-section .container{
+.main-advantage-section {
     padding-bottom: 96px;
     padding-top: 96px;
 }
 
-.li-advantage-section:not(:last-child) {
-    margin-bottom: 72px;
+.ul-advantage-section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
 }
 
 .main-h {
@@ -193,7 +192,6 @@ main .container {
 .main-p-advantage {
     line-height: 1.5;
     font-weight: 500;
-   
     /*немає у проеуті, але мабуть все ж варто додати*/
     text-align: justify;
 }
@@ -201,6 +199,8 @@ main .container {
 /*---------------------main team---------------------*/
 .main-team-section {
     background-color: var(--cloud); 
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .ul-team-section {
@@ -211,13 +211,12 @@ main .container {
     
 }
 
-.team-card {
-    margin-bottom: 72px;
-}
+
 
 
 .div-team-section {
-    margin-bottom: 72px;
+    padding-top: 8px;
+    padding-bottom: 32px;
 }
 
 .team-card {
@@ -236,7 +235,6 @@ main .container {
     color: var(--navy-blue);
     font-size: 36px;
     margin-bottom: 72px;
-    margin-top: 96px;
 }
 
 .main-team-section .main-h {
@@ -279,7 +277,7 @@ main .container {
 
 /*---------------------main portfolio----------------*/
 .main-portfolio-section {
-    margin: 96px 0;
+    padding: 96px 0;
 }
 
 .ul-portfolio-section {
@@ -306,6 +304,7 @@ main .container {
 .div-portfolio-section {
     border: 1px solid var(--cornflower);
     border-top: none;
+    padding: 32px 0;
 }
 
 .main-portfolio-title {
@@ -321,7 +320,6 @@ main .container {
 .main-portfolio-section .main-h {
     text-align: left;
     font-size: 20px;
-    margin-top: 32px;
 }
 
 .portfolio-p {
@@ -333,8 +331,7 @@ main .container {
 
 .footer {
     background-color: var(--navy-blue);
-    max-width: 320px;
-    margin: 0 auto;
+    padding: 96px 0;
 }
 
 .footer .container {
@@ -346,7 +343,7 @@ main .container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 96px;
+    margin-bottom: 72px;
 }
 
 .footer-box-media {
@@ -378,7 +375,6 @@ main .container {
     line-height: 1.5;
     color: var(--cloud);
     max-width: 264px;
-    margin-bottom: 72px;
 }
 
 .footer-media-title {
@@ -434,7 +430,6 @@ main .container {
     flex-direction: column;
     align-items: center;
     gap: 24px;
-    padding-bottom: 96px;
 }
 
 .footer-form-input {
@@ -661,6 +656,7 @@ main .container {
     text-decoration-skip-ink: none;
     color: var(--iris);
     margin-left: 26px;
+
 }
 
 .form-button {
@@ -696,6 +692,10 @@ main .container {
     background: var(--white);
     transform: translateX(100%); 
     transition: transform 400ms ease-in;
+}
+
+.mobile-menu .container{
+    position: fixed;
 }
 
 .mobile-menu.is-open{
@@ -747,12 +747,16 @@ main .container {
     color: var(--ocean);;
 }
 
+.menu-mobile-address{
+    margin-bottom: 48px;
+}
+
 .menu-links-contacts {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 48px;
+    font-style: normal;
 }
 
 .menu-links-contacts .mobile-menu-link {
