@@ -120,7 +120,14 @@
 }
 
 /*---------------------main portfolio----------------*/
+.portfolio-card {
+    flex: 1 1 calc((100% - 72px) / 2);
 
+}
+
+.portfolio-card img {
+    width: 100%;
+}
 /*---------------------footer------------------------*/
 
 .footer .container {
